@@ -4,6 +4,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// 🔥 SERVIR FRONTEND (carpeta /public)
+app.use(express.static("public"));
+
 const PORT = process.env.PORT || 3000;
 
 // Cajero Dragons Casino
@@ -53,6 +56,7 @@ app.post('/girar', (req, res) => {
   });
 });
 
+// 🔥 INICIAR SERVIDOR
 app.listen(PORT, () =>
   console.log(`Servidor Dragons funcionando en http://localhost:${PORT}`)
 );
