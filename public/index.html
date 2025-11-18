@@ -81,7 +81,7 @@ h1 { font-size:1.8rem; color:#ffcc00; text-shadow:0 0 10px #ff00ff,0 0 20px #00f
     <p id="contactoDereck">📞 Contacto: 11 3617-2027 (Dereck)</p>
 
     <button id="btnWhatsapp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="24">
       Contactar por WhatsApp
     </button>
 
@@ -157,7 +157,7 @@ function showPopup(msg, premio=""){
 }
 
 function spinWheel(){
-  fetch("https://dragon-server.onrender.com/girar", {   /* CAMBIAR URL */
+  fetch("https://gira-dragons-backend.onrender.com/girar", {  /* URL CORRECTA */
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({ usuarioId })
@@ -170,7 +170,6 @@ function spinWheel(){
       return;
     }
 
-    // Girar animación
     const spinTime=4000;
     const spinAngle=Math.random()*360+1800;
     const startAngle=currentAngle;
@@ -209,4 +208,4 @@ closePopup.onclick = ()=> popup.style.display="none";
 
 </script>
 </body>
-  </html>
+</html>
